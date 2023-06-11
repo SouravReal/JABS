@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction</title>
+  <link rel="icon" href="../static/assets/images/J A B S.png">
+  <link rel="stylesheet" type="text/css" href="../static/assets/css/custom.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+  <div class="bg overlay"></div>
+  <div class="overlay"></div>
+  <div class="container">
+          <h1>Mental Health Instability Prediction</h1>
+          <form action='/predict' method="post">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                  <label for="age">Age</label>
+                  <!-- <br> -->
+                  <input name="age" type="number" min="20" placeholder="Enter your age" required>
+
+                  <label for="label_gender">Gender:</label>
+                  <select class="my-select" id="label_gender" name="label_gender" required>
+                          <option value="female">Female</option>
+                          <option value="male">Male</option>
+                          <option value="others">Others..</option>
+                  </select>
+
+                  <label for="label_family_history">Is there any history of mental illness in your family?</label>
+                  <select class="my-select" id="label_family_history" name="label_family_history" required>
+                          <option value="no">No</option>
+                          <option value="yes">Yes</option>
+                  </select>
+
+                  <label for="label_observed_consequences">Have you ever gone through any disturbing or traumatic experience in your life?</label>
+                  <select class="my-select" id="label_observed_consequences" name="label_observed_consequences" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </select>
+
+                  <label for="label_work_interfere">Do you experience any inteference in your work?</label>
+                  <select class="my-select" id="label_work_interfere" name="label_work_interfere" required>
+                          <option value="never">Never</option>
+                          <option value="often">Often</option>
+                          <option value="sometimes">Sometimes</option>
+                  </select>
+
+                  <label for="label_benefits">Do you receive benefits from your company?</label>
+                  <select class="my-select" id="label_benefits" name="label_benefits" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </select>
+
+                  <label for="label_care_options">Does your company provide healthcare options to you?</label>
+                  <select class="my-select" id="label_care_options" name="label_care_options" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </select>
+
+                  <label for="label_wellness_program">Are you a part of any wellness program?</label>
+                  <select class="my-select" id="label_wellness_program" name="label_wellness_program" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </select>
+
+                  <label for="label_seek_help">Would you seek help if you feel troubled in your work?</label>
+                  <select class="my-select" id="label_seek_help" name="label_seek_help" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </select>
+
+                  <label for="label_mental_health_consequence">Do you think that discussing a mental health issue with your employer would have negative consequences?</label>
+                  <select class="my-select" id="label_mental_health_consequence" name="label_mental_health_consequence" required>
+                          <option value="maybe">Maybe</option>
+                          <option value="no">No</option>
+                          <option value="yes">Yes</option>
+                  </select>
+
+                  <label for="label_coworkers">Would you be willing to discuss a mental health issue with your coworkers?</label>
+                  <select class="my-select" id="label_coworkers" name="label_coworkers" required>
+                          <option value="no">No</option>
+                          <option value="some_of_them">Some of them</option>
+                          <option value="yes">Yes</option>
+                  </select>
+
+                  <label for="label_mental_health_interview">Would you bring up a mental health issue with a potential employer in an interview?</label>
+                  <select class="my-select" id="label_mental_health_interview" name="label_mental_health_interview" required>
+                    <option value="maybe">Maybe</option>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </select>
+
+                  <label for="label_mental_vs_physical">Do you feel that your employer takes mental health as seriously as physical health?</label>
+                  <select class="my-select" id="label_mental_vs_physical" name="label_mental_vs_physical" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                  </select>
+
+                  <button type="submit">Submit</button>
+          </form>
+  </div>
+
+  <script>
+    var selectElements = document.getElementsByClassName("my-select");
+    for (var i = 0; i < selectElements.length; i++) {
+      selectElements[i].selectedIndex = -1;
+    }
+  </script>
+
+</body>
+</html>

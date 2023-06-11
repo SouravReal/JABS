@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prediction</title>
+        <link rel="icon" href="../static/assets/images/J A B S.png">
+        <link rel="stylesheet" type="text/css" href="../static/assets/css/custom.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+        <div class="bg"></div>
+        <div class="overlay"></div>
+        <div class="container">
+                <h1>Mental Health Instability Prediction</h1>
+                <form action='/predict' method="post">
+                        <label for="name">Name: {{name}}</label>
+                        <br>
+                        <label for="age">Age: {{age}}</label>
+                        <br>
+                        <label for="label_gender">Gender: {{label_gender}}</label>
+                        <br>
+                        <label for="label_family_history">Is there any history of mental illness in your family?</label>
+                        <br>
+                        <label for="label_family_history">Ans: {{label_family_history}}</label>
+                        <br>
+                        <label for="label_observed_consequences">Have you ever gone through any disturbing or traumatic
+                                experience in your life?</label>
+                        <br>
+                        <label for="label_observed_consequences">Ans: {{label_observed_consequences}}</label>
+                        <br>
+                        <label for="label_work_interfere">Do you experience any inteference in your work?</label>
+                        <br>
+                        <label for="label_work_interfere">Ans: {{label_work_interfere}}</label>
+                        <br>
+                        <label for="label_benefits">Do you receive benefits from your company?</label>
+                        <br>
+                        <label for="label_benefits">Ans: {{label_benefits}}</label>
+                        <br>
+                        <label for="label_care_options">Does your company provide healthcare options to you?</label>
+                        <br>
+                        <label for="label_care_options">Ans: {{label_care_options}}</label>
+                        <br>
+                        <label for="label_wellness_program">Are you a part of any wellness program?</label>
+                        <br>
+                        <label for="label_wellness_program">Ans: {{label_wellness_program}}</label>
+                        <br>
+                        <label for="label_seek_help">Would you seek help if you feel troubled in your work?</label>
+                        <br>
+                        <label for="label_seek_help">Ans: {{label_seek_help}}</label>
+                        <br>
+                        <label for="label_mental_health_consequence">Do you think that discussing a mental health issue
+                                with your employer would have negative consequences?</label>
+                        <br>
+                        <label for="label_mental_health_consequence">Ans: {{label_mental_health_consequence}}</label>
+                        <br>
+                        <label for="label_coworkers">Would you be willing to discuss a mental health issue with your
+                                coworkers?</label>
+                        <br>
+                        <label for="label_coworkers">Ans: {{label_coworkers}}</label>
+                        <br>
+                        <label for="label_mental_health_interview">Would you bring up a mental health issue with a
+                                potential employer in an interview?</label>
+                        <br>
+                        <label for="label_mental_health_interview">Ans: {{label_mental_health_interview}}</label>
+                        <br>
+                        <label for="label_mental_vs_physical">Do you feel that your employer takes mental health as
+                                seriously as physical health?</label>
+                        <br>
+                        <label for="label_mental_vs_physical">Ans: {{label_mental_vs_physical}}</label>
+                        <br>
+                        <label for="result">Result: {{pred}}</label>
+                        <br>
+                        <a href="{{url_for('ppage') }}">Test Again !!!</a>
+                </form>
+        </div>
+
+</body>
+
+</html>

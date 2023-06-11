@@ -1,0 +1,125 @@
+﻿body {
+  background-color: #e5e5e5;
+}
+
+.container {
+  background-color: #f2f2f2;
+  border-radius: 30px;
+  box-shadow: -20px -20px 60px #d9d9d9, 20px 20px 60px #ffffff;
+  padding: 40px;
+  margin: 100px auto;
+  max-width: 600px;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url("../images/predres.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #5e5e5e;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 24px;
+  /* margin-top: 20px; */
+  margin: 15px;
+  color: #5e5e5e;
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f2f2f2;
+  box-shadow: -10px -10px 30px #d9d9d9, 10px 10px 30px #ffffff;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #5e5e5e;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 24px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+a {
+  background-color: #5e5e5e;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 24px;
+  margin-top: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #787878;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 400px;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  input,
+  select {
+    padding: 8px;
+    margin-top: 8px;
+  }
+
+  button {
+    font-size: 20px;
+    margin-top: 16px;
+  }
+}
